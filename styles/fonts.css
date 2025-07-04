@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+/* FONT: Inter */
+.inter {
+  font-family: "Inter", sans-serif;
+}
+
+/* FONT: Roboto Mono */
+.roboto-mono {
+  font-family: "Roboto Mono", monospace;
+}
+
+/* FONT: Michroma */
+.michroma-regular {
+  font-family: "Michroma", sans-serif;
+}
+
+/* FONT: Orbitron */
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+}
+
+/* FONT: Bungee */
+.bungee-regular {
+  font-family: "Bungee", cursive;
+}
+
+/* FONT: Amatic SC */
+.amatic-sc-regular {
+  font-family: "Amatic SC", cursive;
+}
+
+/* FONT: Press Start 2P */
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+}
