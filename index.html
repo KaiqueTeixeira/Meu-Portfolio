@@ -1,27 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaíque Teixeira</title>
-    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/style.css">
 
 </head>
 <body>
     
-    <nav>
-        
+    <nav id="home">
         <h1>Kaíque Teixeira</h1>
 
-        <div>
-            <a href="#" class="navigation" id="ihome">Home</a>
-            <a href="#" class="navigation" id="isobre">Sobre mim</a>
-            <a href="#" class="navigation" id="iprojeto">Projetos</a>
-            <a href="#" class="navigation" id="icontato">Contato</a>
+        <div class="navigation">
+            <a href="#home" id="ihome">Home</a>
+            <a href="#sobre" id="isobre">Sobre mim</a>
+            <a href="#projeto" id="iprojeto">Projetos</a>
+            <a href="#contato" id="icontato">Contato</a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="image">
+            <img src="imgs/foto-minha.jpg" alt="">
         </div>
 
-    </nav>
+        <div class="escrita">
+            <h1>Kaíque Teixeira</h1>
+            <h2>Estudante de Programação</h2>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <div class="back-sobre">
+                <h2>Sobre mim</h2>
+                <p>
+                    Olá! Meu nome é Kaíque Teixeira e sou um estudante apaixonado por programação. Estou em constante aprendizado, buscando evoluir nas áreas de front-end e back-end. Gosto de transformar ideias em código e criar projetos que unam criatividade e funcionalidade.  
+                    <br><br>
+                    Meu objetivo é me desenvolver como profissional e contribuir com soluções tecnológicas que façam a diferença. Estou sempre explorando novas linguagens, frameworks e ferramentas para aprimorar minhas habilidades.
+                </p>
+            </div>
+        </section>
+
+        <section id="projeto">
+            <div class="back-projeto">
+                <h2>Projetos</h2>
+
+                <div class="painel">
+                    <div class="card">
+                        <div></div>
+                    </div>
+                    <div class="card">
+                        <div></div>
+                    </div>
+                    <div class="card">
+                        <div></div>
+                    </div>
+                    <div class="card">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="contato">Contato</section>
+    </main>
 
     <div class="inter"> Título com Inter</div>
     <div class="roboto-mono"> Título com Roboto Mono</div>
@@ -31,9 +77,5 @@
     <div class="amatic-sc-regular"> Título com Amatic SC</div>
     <div class="press-start-2p-regular"> Título com Press Start 2P</div>
 
-    
-    
-
-    
 </body>
 </html>
