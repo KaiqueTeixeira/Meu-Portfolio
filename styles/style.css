@@ -21,6 +21,10 @@
     --font7: "Press Start 2P", system-ui; /* Press Start 2P */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* RESET */
 * {
     box-sizing: border-box;
@@ -35,10 +39,10 @@ body {
 }
 
 /* NAVIGATION */
-nav#home {
+nav {
     background-color: rgba(61,22,115,0.95);
 
-    height: 70px;
+    height: 80px;
     width: 100%;
     padding: 0 40px;
 
@@ -48,9 +52,17 @@ nav#home {
     align-items: center;
 
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.308);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    backdrop-filter: blur(8px);
 }
 
-nav#home > h1 {
+nav > h1 {
     color: white;
 
     font-family: var(--font4);
@@ -58,7 +70,19 @@ nav#home > h1 {
     letter-spacing: 2px;
 }
 
-nav#home > .navigation > a {
+nav > ul.navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+nav > ul.navigation > li {
+    list-style-type: none;
+}
+
+nav > ul.navigation > li > a {
+    display: inline-block;
+
     color: white;
 
     font-size: 1.2em;
@@ -72,12 +96,15 @@ nav#home > .navigation > a {
     border-radius: 4px;
 }
 
-nav#home > .navigation > a:hover {
+nav > ul.navigation > li > a:hover {
     background-color: #fff2;
     color: #FFD700;
+
+    transform: scale(1.05);
+    transition: .5s;
 }
 
-nav#home > .navigation > a:active {
+nav > ul.navigation > li > a:active {
     background-color: #fff3;
     color: #FFD700;
     box-shadow: inset 0 2px 8px #0005;  
@@ -85,17 +112,18 @@ nav#home > .navigation > a:active {
 }
 
 /* HEADER */
-header {
+header#home {
     display: flex;
     flex-flow: row;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
 
-    gap: 300px;
+    min-height: 100vh;
+
+    gap: 150px;
 }
 
-header > div.escrita > h1 {
+header#home > div.text-part > h1 {
     color: white;
     font-size: 3em;
     letter-spacing: 2px;
@@ -103,38 +131,97 @@ header > div.escrita > h1 {
     font-family: var(--font7);
 }
 
-header > div.escrita > h2 {
+header#home > div.text-part > h2 {
     color: white;
     font-family: var(--font4);
     font-size: 1.5em;
 }
 
-header > div.image > img {
+header#home > div.image > img {
     height: 600px;
     width: 600px;
-
-    background-size: contain;
+    object-fit: cover;
 
     border-radius: 50%;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.733);
 }
 
+header#home > div.text-part > a.btn-header {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;     
+    height: 60px;
+    margin: 0 8px;
+
+    border: 2px solid var(--cor6);
+    border-radius: 50%;
+    background: transparent;
+
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    transition: 
+        width 0.6s,
+        padding 0.6s, 
+        border-radius 0.6s, 
+        border-color 0.6s,
+        color 0.6s;
+}
+
+header#home > div.text-part > a.btn-header > span.tooltip-text {
+    opacity: 0;
+    width: 0;
+    margin-left: 0;
+
+    color: white;
+    background: transparent;
+
+    font-size: 1em;
+    white-space: nowrap;
+    pointer-events: none;
+
+    transition: 
+        opacity 0.6s, 
+        width 0.6s, 
+        margin-left 0.6s;
+
+    overflow: hidden;
+}
+
+header#home > div.text-part > a.btn-header:hover {
+    width: auto;              /* cresce para virar pílula */
+    padding: 0 28px 0 18px;
+    border-radius: 30px;
+    justify-content: flex-start;
+}
+
+header#home > div.text-part > a.btn-header:hover > span.tooltip-text {
+    opacity: 1;
+    width: auto;
+    margin-left: 12px;
+}
+
 /* SOBRE */
 section#sobre {
-    height: 100vh;
-
-    margin-top: 200px;
+    min-height: 100vh;
     padding: 20px;
 }
 
 section > div.back-sobre { 
     background-color: var(--cor4);
+    width: 90%;
 
-    width: 85%;
-    height: 85%;
     border-radius: 4px;
-
     margin: auto;
+    padding: 40px 0;
 }
 
 section#sobre > div.back-sobre > h2 {
@@ -155,21 +242,17 @@ section#sobre > div.back-sobre > p {
 
 /* PROJETO */
 section#projeto {
-    height: 100vh;
-
-    margin-top: 200px;
+    min-height: 100vh;
     padding: 20px;
 }
 
 section#projeto > .back-projeto {
     background-color: var(--cor4);
     width: 85%;
-    height: 95%;
 
     border-radius: 4px;
-
     margin: auto;
-
+    padding: 40px 0;
 }
 
 section#projeto > .back-projeto > h2 {
@@ -205,4 +288,29 @@ section#projeto > .back-projeto > .painel {
     border-radius: 10px;
     margin: auto;
     margin-top: 40px;
+}
+
+/* CONTATO */
+section#contato {
+    min-height: 100vh;
+    padding: 20px;
+}
+
+section#contato > div.back-contato {
+    background-color: var(--cor5);
+    width: 85%;
+
+    margin: auto;
+    border-radius: 10px;
+    padding: 40px 0;
+}
+
+/* RODAPE */
+footer#rodape {
+    background-color: var(--cor4);
+
+    height: 400px;
+    width: 100%;
+
+    border-radius: 10px 10px 0px 0px;
 }

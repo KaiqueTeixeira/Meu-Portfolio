@@ -7,28 +7,42 @@
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/style.css">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=download" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
     
-    <nav id="home">
+    <nav>
         <h1>Kaíque Teixeira</h1>
 
-        <div class="navigation">
-            <a href="#home" id="ihome">Home</a>
-            <a href="#sobre" id="isobre">Sobre mim</a>
-            <a href="#projeto" id="iprojeto">Projetos</a>
-            <a href="#contato" id="icontato">Contato</a>
-        </div>
+        <ul class="navigation">
+            <li><a href="#home" id="ihome">Home</a></li>
+            <li><a href="#sobre" id="isobre">Sobre mim</a></li>
+            <li><a href="#projeto" id="iprojeto">Projetos</a></li>
+            <li><a href="#contato" id="icontato">Contato</a></li>
+        </ul>
     </nav>
 
-    <header>
+    <header id="home">
         <div class="image">
-            <img src="imgs/foto-minha.jpg" alt="">
+            <img src="imgs/foto-minha.jpg" alt="Foto de Kaíque Figur Teixeira">
         </div>
 
-        <div class="escrita">
+        <div class="text-part">
             <h1>Kaíque Teixeira</h1>
             <h2>Estudante de Programação</h2>
+
+            <a href="docs/Currículo Kaíque.docx" download class="btn-header">
+                <span class="material-symbols-outlined">download</span>
+                <span class="tooltip-text">Currículo</span>
+            </a>
+
+            <a href="https://github.com/KaiqueTeixeira" target="_blank" class="btn-header">    
+                <i class="fab fa-github"></i>
+                <span class="tooltip-text">Github</span>
+            </a>
+            
         </div>
     </header>
 
@@ -66,16 +80,25 @@
 
         </section>
 
-        <section id="contato">Contato</section>
+        <section id="contato">
+            <div class="back-contato">
+                <p>Entre em contato ou envie-me um e-mail diretamente para TESTE@gmail.com</p>
+                <form action="" method="POST">
+
+                    <label for=""></label>
+                    <input type="text">
+                    <input type="email">
+                    <input type="text"> 
+
+                    <button type="submit">Enviar mensagem</button>
+
+                </form>
+            </div>
+        </section>
     </main>
 
-    <div class="inter"> Título com Inter</div>
-    <div class="roboto-mono"> Título com Roboto Mono</div>
-    <div class="michroma-regular"> Título com Michroma</div>
-    <div class="orbitron"> Título com Orbitron</div>
-    <div class="bungee-regular"> Título com Bungee</div>
-    <div class="amatic-sc-regular"> Título com Amatic SC</div>
-    <div class="press-start-2p-regular"> Título com Press Start 2P</div>
-
+    <footer id="rodape">
+        
+    </footer>
 </body>
 </html>
