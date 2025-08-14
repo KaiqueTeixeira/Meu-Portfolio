@@ -5,9 +5,7 @@
     --corBranca: #ffffff;
     --corPreta: #000000;
     --cor1: #4f3b6b;
-    --cor2: #171125;
-    --cor3: #110d1d;
-    --cor4: #0B0618;
+    --corRoxo: #793ad1;
 }
 
 /* FONTES */
@@ -82,7 +80,7 @@ button:hover{
 
 /* PARTE DO NAV */
 nav.menu-desktop {
-    background: linear-gradient(to bottom, var(--cor4) 80%, rgba(23, 17, 37, 0.100) 100%);
+    background: linear-gradient(to bottom, #0B0618 80%, rgba(23, 17, 37, 0.100) 100%);
     color: var(--corBranca);
 
     width: 100%;
@@ -131,7 +129,7 @@ section#home .flex {
 
 /* PARTE DA ESCRITA DO HOME */
 .text-home h1 {
-    color: #793ad1;
+    color: var(--corRoxo);
     font-size: clamp(3rem, 5vw, 3.5em); /* ANTES ERA 5em */
     font-weight: bold;
 
@@ -139,7 +137,7 @@ section#home .flex {
 }
 
 .text-home h1 span:hover {
-    color: #3a2e4b;
+    color: #382455;
 }
 
 .text-home p {
@@ -238,7 +236,7 @@ section#sobre .flex {
 }
 
 .text-sobre h1 span {
-    color: #793ad1;
+    color: var(--corRoxo);
 }
 
 .text-sobre p {
@@ -252,7 +250,7 @@ section#sobre .flex {
 }
 
 .img-sobre img {
-    height: 550px;
+    height: 400px;
     width: auto;
     border-radius: 40px;
 
@@ -264,17 +262,6 @@ section#sobre .flex {
     transform: scale(1.05);
 }
 
-.btn-sobre a {
-    text-decoration: none;
-}
-
-.btn-sobre a button {
-    width: 56px;
-    height: 56px;
-    font-size: 24px;
-    margin-right: 10px;
-}
-
 /* PARTE DO PROJETO */
 
 /* PARTE DO CONTATO */
@@ -284,7 +271,6 @@ section#contato .flex {
 
 .txt-contato {
     flex: 1;
-    min-width: 500px;
 }
 
 .txt-contato {
@@ -297,7 +283,7 @@ section#contato .flex {
 }
 
 .txt-contato h1 span {
-    color: #793ad1;
+    color: var(--corRoxo);
 }
 
 .txt-contato p {
@@ -307,7 +293,7 @@ section#contato .flex {
 }
 
 .txt-contato p > a {
-    color: #793ad1;
+    color: var(--corRoxo);
     text-decoration: none;
 }
 
@@ -329,7 +315,6 @@ section#contato .flex {
 /* PARTE DO FORMULARIO */
 .formulario {
     flex: 1;
-    min-height: 500px;
 }
 
 .formulario form {
@@ -365,7 +350,7 @@ form textarea {
     font-weight: bold;
     cursor: pointer;
 
-    background: #793ad1;
+    background: var(--corRoxo);
     color: #fff;
 
     transition: 0.3s ease;
