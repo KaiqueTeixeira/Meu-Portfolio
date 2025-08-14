@@ -63,6 +63,23 @@ section#contato {
     display: flex;
 }
 
+button {
+    background-color: transparent;
+    border: 2px solid var(--corBranca);
+    border-radius: 10px;
+
+    font-size: 1.1em;
+    color: var(--corBranca);
+
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+button:hover{
+    background-color: #793ad1;
+    transform: scale(1.05);
+}
+
 /* PARTE DO NAV */
 nav.menu-desktop {
     background: linear-gradient(to bottom, var(--cor4) 80%, rgba(23, 17, 37, 0.100) 100%);
@@ -201,33 +218,11 @@ section#home .flex {
     transform: translate(-50%, -50%);
 }
 
-/* PARTE DO HOME - BOTÕES */
-.btn-redes a {
-    text-decoration: none;
-}
-
-.btn-redes a i {
-    width: 50px;
+.text-home button {
+    width: 200px;
     height: 50px;
 
-    margin: 10px 10px 0 0;
-    border-radius: 50%;
-    
-    font-size: 30px;
-    font-weight: bolder;
-    color: var(--corBranca);
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: 0.2s;
-}
-
-.btn-redes a i:hover {
-    transform: scale(1.1);
-    background-color: var(--cor1);
-    color: var(--corBranca);
+    margin: 15px 0;
 }
 
 /* PARTE DO SOBRE */
@@ -269,10 +264,16 @@ section#sobre .flex {
     transform: scale(1.05);
 }
 
-text-sobre > .btn-redes {
-    margin: 10px 5px;
+.btn-sobre a {
+    text-decoration: none;
 }
 
+.btn-sobre a button {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    margin-right: 10px;
+}
 
 /* PARTE DO PROJETO */
 
@@ -314,34 +315,15 @@ section#contato .flex {
     text-decoration: underline;
 }
 
-.redes-sociais {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
+.btn-contato a {
+    text-decoration: none;
 }
 
-.redes-sociais i {
-    width: 48px;
-    height: 48px;
-
-    margin: 10px 10px 0 0;
-    border-radius: 50%;
-    
-    font-size: 30px;
-    font-weight: bolder;
-    color: var(--corBranca);
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: 0.2s;
-}
-
-.redes-sociais i:hover {
-    transform: scale(1.1);
-    background-color: var(--cor1);
-    color: var(--corBranca);
+.btn-contato button {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    margin-right: 10px;
 }
 
 /* PARTE DO FORMULARIO */
