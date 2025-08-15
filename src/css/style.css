@@ -61,7 +61,7 @@ button {
     border: 2px solid var(--corBranca);
     border-radius: 10px;
 
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: var(--corBranca);
 
     cursor: pointer;
@@ -267,7 +267,7 @@ section#sobre .interface {
 
 /* PARTE DO PROJETO */
 section#projeto {
-    height: 90vh;
+    height: 70vh;
 }
 
 section#projeto .interface > h1 {
@@ -332,22 +332,22 @@ section#projeto .interface > h1 {
 
 
 .container-portfolio .projeto1 {
-    background: url(../image/portfolio/layout-do-projeto.jpg);
+    background: url(../image/projetos/porftolio-completo.png);
     background-size: cover;
 }
 
 .container-portfolio .projeto2 {
-    background: url(../image/portfolio/screencapture-127-0-0-1-5500-Portfolios-Exemplos-Meu-Portfolio-index-html-2025-08-15-18_58_12.png);
+    background: url(../image/projetos/site-exemplo1.jpg);
     background-size: cover;
 }
 
 .container-portfolio .projeto3 {
-    background: url(../image/portfolio/layout-do-projeto.jpg);
+    background: url(../image/projetos/porftolio-completo.png);
     background-size: cover;
 }
 
 .container-portfolio .projeto4 {
-    background: url(../image/portfolio/screencapture-127-0-0-1-5500-Portfolios-Exemplos-Meu-Portfolio-index-html-2025-08-15-18_58_12.png);
+    background: url(../image/projetos/site-exemplo2.jpg);
     background-size: cover;
 }
 
