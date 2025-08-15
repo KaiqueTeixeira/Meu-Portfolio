@@ -4,8 +4,10 @@
 :root{ 
     --corBranca: #ffffff;
     --corPreta: #000000;
-    --cor1: #4f3b6b;
     --corRoxo: #793ad1;
+    --corCinza: #8d8d8d;
+
+    --cor1: #4f3b6b;
 }
 
 /* FONTES */
@@ -131,8 +133,14 @@ section#home > .interface {
     cursor: default;
 }
 
+.text-home h1 span {
+    display: inline-block;
+    transition: .5s;
+}
+
 .text-home h1 span:hover {
-    color: #382455;
+    color: #422072;
+    transform: scale(1.1);
 }
 
 .text-home p {
@@ -218,6 +226,15 @@ section#home > .interface {
     margin: 15px 0;
 }
 
+h1.titulo-section {
+    font-size: 4rem;
+    color: var(--corBranca);
+}
+
+h1.titulo-section span {
+    color: var(--corRoxo);
+}
+
 /* PARTE DO SOBRE */
 section#sobre .interface {
     display: flex;
@@ -226,21 +243,12 @@ section#sobre .interface {
     gap: 96px;
 }
 
-.text-sobre h1 {
-    color: var(--corBranca);
-    font-size: 4em;
-}
-
-.text-sobre h1 span {
-    color: var(--corRoxo);
-}
-
 .text-sobre p {
-    color: var(--corBranca);
+    color: var(--corCinza);
     
     font-size: 1.2em;
     text-align: justify;
-    line-height: 1.3;
+    line-height: 1.5;
 
     margin: 24px 0;
 }
@@ -273,20 +281,8 @@ section#contato > .interface {
     flex: 1;
 }
 
-.text-contato {
-    color: var(--corBranca);
-}
-
-.text-contato h1 {
-    font-size: 4.5em;
-    margin: 40px 0;
-}
-
-.text-contato h1 span {
-    color: var(--corRoxo);
-}
-
 .text-contato p {
+    color: var(--corCinza);
     font-size: 1.2em;
     margin: 40px 0;
     line-height: 25px;
@@ -312,7 +308,6 @@ section#contato > .interface {
     margin-right: 10px;
 }
 
-/* PARTE DO FORMULARIO */
 .contato form {
     width: 50%;
 }
@@ -328,7 +323,7 @@ section#contato > .interface {
     color: var(--corBranca);
     font-size: 1.1rem;
 
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 form textarea {
@@ -360,6 +355,7 @@ form textarea {
 
 /* PARTE DO FOOTER */
 footer {
+    background-color: var(--cor1);
     color: var(--corBranca);
     text-align: center;
 
