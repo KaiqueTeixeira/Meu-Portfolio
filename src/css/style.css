@@ -35,30 +35,24 @@ body {
 
 section#home {
     height: calc(100vh - 87px);
-    padding: 40px 4%;
 
     display: flex;
     align-items: center;
 }
-
-section#sobre, 
+ 
+section#sobre,
 section#projeto,
 section#contato {
     height: 100vh;
-    padding: 40px 4%;
 
     display: flex;
     align-items: center;
 }
 
 .interface {
-    max-width: 1280px;
+    max-width: 1380px;
     padding: 0 4%;
     margin: 0 auto;
-}
-
-.flex {
-    display: flex;
 }
 
 button {
@@ -118,7 +112,8 @@ nav.menu-desktop ul li a:hover {
 }
 
 /* PARTE DO HOME */
-section#home .flex {
+section#home > .interface {
+    display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
@@ -224,10 +219,11 @@ section#home .flex {
 }
 
 /* PARTE DO SOBRE */
-section#sobre .flex {
+section#sobre .interface {
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 80px;
+    gap: 96px;
 }
 
 .text-sobre h1 {
@@ -265,39 +261,43 @@ section#sobre .flex {
 /* PARTE DO PROJETO */
 
 /* PARTE DO CONTATO */
-section#contato .flex {
-    gap: 150px;
+section#contato > .interface {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
 }
 
-.txt-contato {
+.text-contato,
+.formulario {
     flex: 1;
 }
 
-.txt-contato {
+.text-contato {
     color: var(--corBranca);
 }
 
-.txt-contato h1 {
+.text-contato h1 {
     font-size: 4.5em;
     margin: 40px 0;
 }
 
-.txt-contato h1 span {
+.text-contato h1 span {
     color: var(--corRoxo);
 }
 
-.txt-contato p {
+.text-contato p {
     font-size: 1.2em;
     margin: 40px 0;
     line-height: 25px;
 }
 
-.txt-contato p > a {
+.text-contato p > a {
     color: var(--corRoxo);
     text-decoration: none;
 }
 
-.txt-contato p > a:hover {
+.text-contato p > a:hover {
     text-decoration: underline;
 }
 
@@ -313,41 +313,38 @@ section#contato .flex {
 }
 
 /* PARTE DO FORMULARIO */
-.formulario {
-    flex: 1;
+.contato form {
+    width: 50%;
 }
 
-.formulario form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; 
-}
-
-.form-input  {
+.form-input {
     width: 100%;
-
     padding: 14px 18px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-
-    font-size: 16px;
-
     background: rgba(255, 255, 255, 0.1);
-    color: white;
+    
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+
+    color: var(--corBranca);
+    font-size: 1.1rem;
+
+    margin-bottom: 8px;
 }
 
 form textarea {
-    min-height: 150px;
     resize: none;
+    height: 150px;
 }
 
 .formulario form button {
+    width: 100%;
     padding: 14px;
+
     border: none;
     border-radius: 10px;
     
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: 600;
     cursor: pointer;
 
     background: var(--corRoxo);
