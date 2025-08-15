@@ -43,7 +43,6 @@ section#home {
 }
  
 section#sobre,
-section#projeto,
 section#contato {
     height: 100vh;
 
@@ -267,6 +266,90 @@ section#sobre .interface {
 }
 
 /* PARTE DO PROJETO */
+section#projeto {
+    height: 90vh;
+}
+
+section#projeto .interface > h1 {
+    margin: 16px 0 70px 0;
+    text-align: center;
+}
+
+.container-portfolio {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.container-portfolio .box-portfolio {
+    position: relative;
+
+    height: 400px;
+    width: 250px;
+
+    border: 2px solid var(--corRoxo);
+    border-radius: 10px;
+    
+    background-position-y: 0%;
+
+    overflow: hidden;
+
+    transition: background-position-y 2s;
+}
+
+.container-portfolio .box-portfolio .text-portfolio {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    top: 0;
+    left: 0;
+
+    background-color: #17043b77;
+    border-radius: 16px;
+    z-index: 999999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--corBranca);
+    font-size: 18px;
+    font-weight: 800;
+
+    opacity: 0;
+    transition: .5s;
+}
+
+.container-portfolio .box-portfolio .text-portfolio:hover {
+    opacity: 1;
+}
+
+.container-portfolio .box-portfolio:hover {
+    background-position-y: 100%;
+}
+
+
+.container-portfolio .projeto1 {
+    background: url(../image/portfolio/layout-do-projeto.jpg);
+    background-size: cover;
+}
+
+.container-portfolio .projeto2 {
+    background: url(../image/portfolio/screencapture-127-0-0-1-5500-Portfolios-Exemplos-Meu-Portfolio-index-html-2025-08-15-18_58_12.png);
+    background-size: cover;
+}
+
+.container-portfolio .projeto3 {
+    background: url(../image/portfolio/layout-do-projeto.jpg);
+    background-size: cover;
+}
+
+.container-portfolio .projeto4 {
+    background: url(../image/portfolio/screencapture-127-0-0-1-5500-Portfolios-Exemplos-Meu-Portfolio-index-html-2025-08-15-18_58_12.png);
+    background-size: cover;
+}
 
 /* PARTE DO CONTATO */
 section#contato > .interface {
