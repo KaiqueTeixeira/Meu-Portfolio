@@ -497,22 +497,41 @@ form textarea {
 
 /* PARTE DO FOOTER */
 footer {
-    background-color: var(--cor3);
-    color: var(--corBranca);
-    text-align: center;
+    background-color: transparent;
+    color: var(--cor1);
 
-    padding: 20px 0;
+    padding: 25px 0;
 
     font-size: clamp(0.8rem, 2vw, 0.75rem);  /* ANTES ERA 0.95rem */
     line-height: 1rem;
+}
 
+footer .interface {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 footer div {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
+
+footer div a {
+    color: var(--cor2);
+    text-decoration: none;
+    transition: .3s;
+}
+
+footer div a:hover {
+    color: var(--cor1);
+    transform: scale(1.4);
+}
+
+footer div i {
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+
 
