@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/* MONOCROMÁTICO */
+:root {
+    --mono1: #793ad1;
+    --mono2: #2f1752;
+    --mono3: #a37dd9;
+    --mono4: #3d2f52;
+    --mono5: #5b2c9e;
+}
+
+/* GRADUAÇÃO DE COR */
+:root {
+    --gradu1: #793ad1;
+    --gradu2: #5b2c9e;
+    --gradu3: #361a5e;
+    --gradu4: #8741ea;
+    --gradu5: #6230ab;
+}
+
+/* MINHA PALETAS */
+:root {
+    --cor1: #793ad1;
+    --cor2: #5b2c9e;
+    --cor3: #361a5e;
+    --cor4: #8741ea;
+    --cor5: #6230ab;
+}

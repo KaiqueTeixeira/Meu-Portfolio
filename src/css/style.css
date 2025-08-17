@@ -4,10 +4,18 @@
 :root{ 
     --corBranca: #ffffff;
     --corPreta: #000000;
-    --corRoxo: #793ad1;
     --corCinza: #8d8d8d;
 
-    --cor1: #4f3b6b;
+    --cor1: #8741ea;
+    --cor2: #793ad1;
+    --cor3: #5b2c9e;
+    --cor4: #3D2F52;
+    --cor3: #2F1752;
+
+
+    --cor6: #a37dd9;
+    
+    --corNav: #4f3b6b;
 }
 
 /* FONTES */
@@ -69,7 +77,7 @@ button {
 }
 
 button:hover{
-    background-color: #793ad1;
+    background-color: var(--cor2);
     transform: scale(1.05);
 }
 
@@ -99,7 +107,7 @@ nav.menu-desktop ul li {
 
 nav.menu-desktop ul li a {
     display: inline-block;
-    color: var(--cor1);
+    color: var(--corNav);
 
     font-size: clamp(1rem, 2.5vw, 2rem); /* ANTES ERA 30px */
     text-decoration: none;  
@@ -125,7 +133,7 @@ section#home > .interface {
 
 /* PARTE DA ESCRITA DO HOME */
 .text-home h1 {
-    color: var(--corRoxo);
+    color: var(--cor2);
     font-size: clamp(3rem, 5vw, 3.5em); /* ANTES ERA 5em */
     font-weight: bold;
 
@@ -138,7 +146,7 @@ section#home > .interface {
 }
 
 .text-home h1 span:hover {
-    color: #422072;
+    color: var(--cor3);
     transform: scale(1.1);
 }
 
@@ -231,7 +239,7 @@ h1.titulo-section {
 }
 
 h1.titulo-section span {
-    color: var(--corRoxo);
+    color: var(--cor2);
 }
 
 /* PARTE DO SOBRE */
@@ -287,7 +295,7 @@ section#projeto .interface > h1 {
     height: 400px;
     width: 250px;
 
-    border: 2px solid var(--corRoxo);
+    border: 2px solid var(--cor2);
     border-radius: 10px;
     
     background-position-y: 0%;
@@ -351,6 +359,57 @@ section#projeto .interface > h1 {
     background-size: cover;
 }
 
+/* PARTE DE HABILIDADES */
+section#skills {
+    padding: 180px 0;
+}
+
+section#skills article {
+    display: grid;
+    grid-template: 1fr / 300px 300px 300px;
+
+    justify-content: center;
+
+    gap: 40px;
+    margin: 80px 0;
+}
+
+section#skills .git {
+    grid-column: 2;
+}
+
+section#skills h1 {
+    text-align: center;
+}
+
+#skills .box-skills {
+    background-color: var(--cor3);
+    padding: 20px;
+
+    border-radius: 16px;
+
+    color: var(--corBranca);
+    font-weight: 600;
+}
+
+#skills .box-skills:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.box-skills .icon-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+    gap: 32px;
+}
+
+.box-skills .icon-skills img {
+    max-width: 120px;
+}
+
 /* PARTE DO CONTATO */
 section#contato > .interface {
     width: 100%;
@@ -372,7 +431,7 @@ section#contato > .interface {
 }
 
 .text-contato p > a {
-    color: var(--corRoxo);
+    color: var(--cor2);
     text-decoration: none;
 }
 
@@ -425,7 +484,7 @@ form textarea {
     font-weight: 600;
     cursor: pointer;
 
-    background: var(--corRoxo);
+    background: var(--cor2);
     color: #fff;
 
     transition: 0.3s ease;
@@ -438,7 +497,7 @@ form textarea {
 
 /* PARTE DO FOOTER */
 footer {
-    background-color: var(--cor1);
+    background-color: var(--cor3);
     color: var(--corBranca);
     text-align: center;
 
