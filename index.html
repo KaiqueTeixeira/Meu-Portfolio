@@ -6,13 +6,24 @@
     <title>Kaíque Teixeira</title>
     
     <!-- ESTILO CSS --><link rel="stylesheet" href="src/css/style.css"> 
+    <!-- BOTTOM NAV --><link rel="stylesheet" href="src/css/bottom-nav.css">
+
     <!-- BOOTSTRAP ICONS --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!-- FONTE INTER --><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=download" />
 
 </head>
 <body>
 
-    <header>
+    <div class="barra" id="barra">
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre mim</a></li>
+            <li><a href="#projeto">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </div>
+
+    <header id="header">
         <nav class="menu-desktop">
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -151,7 +162,7 @@
 
     </main>
 
-    <footer>
+    <footer id="footer">
         &copy; Criado Kaíque Teixeira
 
         <div>
@@ -160,6 +171,8 @@
             <i class="bi bi-instagram"></i>
         </div>
     </footer>
+
+    <script src="src/js/teste.js"></script>
 
 </body>
 </html>
