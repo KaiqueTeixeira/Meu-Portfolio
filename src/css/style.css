@@ -203,7 +203,6 @@ section#home > .interface {
 }   
 
 .img-home:hover img {
-    transform: scale(1.07);
     box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }   
 
@@ -224,6 +223,17 @@ section#home > .interface {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    animation: rodar 10s ease-in-out infinite;
+}
+
+@keyframes rodar {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 
 .text-home button {
