@@ -44,8 +44,17 @@ body {
 section#home,
 section#sobre,
 section#contato {
-    height: 100vh;
+    min-height: 100vh; /* garante que ocupa pelo menos a altura da tela */
+    padding: 4rem 2rem; /* respiro interno */
 
+    display: flex;
+    align-items: center;
+}
+
+section#projeto,
+section#skills {
+    padding: 180px 0;
+    
     display: flex;
     align-items: center;
 }
@@ -308,10 +317,6 @@ section#sobre .interface {
 }
 
 /* PARTE DO PROJETO */
-section#projeto {
-    height: 70vh;
-}
-
 section#projeto .interface > h1 {
     margin: 16px 0 70px 0;
     text-align: center;
@@ -372,7 +377,6 @@ section#projeto .interface > h1 {
     background-position-y: 100%;
 }
 
-
 .container-portfolio .projeto1 {
     background: url(../image/projetos/porftolio-completo.png);
     background-size: cover;
@@ -394,10 +398,6 @@ section#projeto .interface > h1 {
 }
 
 /* PARTE DE HABILIDADES */
-section#skills {
-    padding: 180px 0;
-}
-
 section#skills article {
     display: grid;
     grid-template: 1fr / 300px 300px 300px;
@@ -405,7 +405,7 @@ section#skills article {
     justify-content: center;
 
     gap: 40px;
-    margin: 80px 0;
+    margin: 80px 0 0 0;
 }
 
 section#skills .git {
@@ -566,6 +566,3 @@ footer div i {
     font-size: 1.3em;
     cursor: pointer;
 }
-
-
-
