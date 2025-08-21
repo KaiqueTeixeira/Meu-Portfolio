@@ -317,6 +317,7 @@ section#home > .interface {
     width: 200px;
     border-radius: 25px;
     justify-content: flex-start;
+    background-color: var(--cor2);
 }
 
 .text-home .curriculo:hover i { /* Ícone desliza um pouquinho pra esquerda */
