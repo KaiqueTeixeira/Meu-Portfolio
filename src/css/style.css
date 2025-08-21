@@ -12,7 +12,6 @@
     --cor4: #3D2F52;
     --cor5: #2F1752;
 
-
     --cor6: #a37dd9;
     
     --corNav: #4f3b6b;
@@ -28,7 +27,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
     font-family: Helvetica, sans-serif;
 }
 
@@ -42,18 +40,21 @@ body {
     background-size: cover;
     min-height: 100vh;
 }
-
-section#home {
-    height: calc(100vh - 87px);
+ 
+section#home,
+section#sobre,
+section#contato {
+    min-height: 100vh; /* garante que ocupa pelo menos a altura da tela */
+    padding: 4rem 2rem; /* respiro interno */
 
     display: flex;
     align-items: center;
 }
- 
-section#sobre,
-section#contato {
-    height: 100vh;
 
+section#projeto,
+section#skills {
+    padding: 180px 0;
+    
     display: flex;
     align-items: center;
 }
@@ -83,22 +84,27 @@ button:hover{
 
 /* PARTE DO NAV */
 nav.menu-desktop {
-    background: linear-gradient(to bottom, #0B0618 80%, rgba(23, 17, 37, 0.100) 100%);
-    color: var(--corBranca);
-
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    z-index: 1000;
+
+    /*background: linear-gradient(to bottom, #0B0618 80%, rgba(23, 17, 37, 0.100) 100%);*/
+    background: rgba(15, 10, 30, 0.6);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+
     padding: 25px;
     
     display: flex;
-    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
 
 nav.menu-desktop ul {
     display: flex;
-    flex-flow: row wrap;
-    gap: 100px;
+    gap: 80px;
 }
 
 nav.menu-desktop ul li {
@@ -106,18 +112,45 @@ nav.menu-desktop ul li {
 }
 
 nav.menu-desktop ul li a {
-    display: inline-block;
-    color: var(--corNav);
+    position: relative;
+    color: var(--corBranca);
 
-    font-size: clamp(1rem, 2.5vw, 2rem); /* ANTES ERA 30px */
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
     text-decoration: none;  
+
+    transition: color .5s ease;
+}
+
+nav.menu-desktop ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--cor2);
+    transition: width .5s;
+}
+
+nav.menu-desktop ul li a:hover::after,
+nav.menu-desktop ul li a.active::after {
+    width: 100%;
 }
 
 nav.menu-desktop ul li a:hover {
-    color: var(--corBranca);
+    color: var(--cor2);
+}
 
-    transform: scale(1.05);
-    transition: 0.4s;
+nav.menu-desktop ul li a.active::after {
+    width: 100%;
+}
+
+nav.menu-desktop ul li a.active {
+    color: var(--cor2);
 }
 
 /* PARTE DO HOME */
@@ -243,6 +276,59 @@ section#home > .interface {
     margin: 15px 0;
 }
 
+/* CURRICULO */
+.text-home .curriculo {
+    position: relative;
+
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+
+    border-radius: 50%;
+    background-color: transparent;
+
+    overflow: hidden;
+
+    transition: all 0.4s ease;
+}
+
+.text-home .curriculo i { /* Ícone SEMPRE centralizado */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.text-home .curriculo span { /* Texto escondido no início */
+    opacity: 0;
+    white-space: nowrap;
+    
+    font-size: 1rem;
+    margin-left: 32px; /* empurra texto pra direita do ícone */
+    transition: opacity 0.3s ease;
+}
+
+/* Ao passar o mouse */
+.text-home .curriculo:hover {
+    width: 200px;
+    border-radius: 25px;
+    justify-content: flex-start;
+    background-color: var(--cor2);
+}
+
+.text-home .curriculo:hover i { /* Ícone desliza um pouquinho pra esquerda */
+    left: 20px;
+    transform: translate(0, -50%);
+}
+
+.text-home .curriculo:hover span { /* Texto aparece */
+  opacity: 1; 
+}
+
 h1.titulo-section {
     font-size: 4rem;
     color: var(--corBranca);
@@ -283,11 +369,54 @@ section#sobre .interface {
     transform: scale(1.05);
 }
 
-/* PARTE DO PROJETO */
-section#projeto {
-    height: 70vh;
+/* PARTE DE HABILIDADES */
+section#skills article {
+    display: grid;
+    grid-template: 1fr / 300px 300px 300px;
+
+    justify-content: center;
+
+    gap: 40px;
+    margin: 80px 0 0 0;
 }
 
+section#skills .git {
+    grid-column: 2;
+}
+
+section#skills h1 {
+    text-align: center;
+}
+
+#skills .box-skills {
+    background-color: var(--cor5);
+    padding: 20px;
+
+    border-radius: 16px;
+
+    color: var(--corBranca);
+    font-weight: 600;
+}
+
+#skills .box-skills:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.box-skills .icon-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+    gap: 32px;
+}
+
+.box-skills .icon-skills img {
+    max-width: 120px;
+}
+
+/* PARTE DO PROJETO */
 section#projeto .interface > h1 {
     margin: 16px 0 70px 0;
     text-align: center;
@@ -348,7 +477,6 @@ section#projeto .interface > h1 {
     background-position-y: 100%;
 }
 
-
 .container-portfolio .projeto1 {
     background: url(../image/projetos/porftolio-completo.png);
     background-size: cover;
@@ -367,57 +495,6 @@ section#projeto .interface > h1 {
 .container-portfolio .projeto4 {
     background: url(../image/projetos/site-exemplo2.jpg);
     background-size: cover;
-}
-
-/* PARTE DE HABILIDADES */
-section#skills {
-    padding: 180px 0;
-}
-
-section#skills article {
-    display: grid;
-    grid-template: 1fr / 300px 300px 300px;
-
-    justify-content: center;
-
-    gap: 40px;
-    margin: 80px 0;
-}
-
-section#skills .git {
-    grid-column: 2;
-}
-
-section#skills h1 {
-    text-align: center;
-}
-
-#skills .box-skills {
-    background-color: var(--cor3);
-    padding: 20px;
-
-    border-radius: 16px;
-
-    color: var(--corBranca);
-    font-weight: 600;
-}
-
-#skills .box-skills:hover {
-    transform: scale(1.07);
-    box-shadow: 0 0 20px rgba(255,255,255,0.2);
-}
-
-.box-skills .icon-skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 20px;
-    gap: 32px;
-}
-
-.box-skills .icon-skills img {
-    max-width: 120px;
 }
 
 /* PARTE DO CONTATO */
@@ -542,6 +619,3 @@ footer div i {
     font-size: 1.3em;
     cursor: pointer;
 }
-
-
-
