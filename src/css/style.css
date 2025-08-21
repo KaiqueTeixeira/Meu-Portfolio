@@ -276,6 +276,58 @@ section#home > .interface {
     margin: 15px 0;
 }
 
+/* CURRICULO */
+.text-home .curriculo {
+    position: relative;
+
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+
+    border-radius: 50%;
+    background-color: transparent;
+
+    overflow: hidden;
+
+    transition: all 0.4s ease;
+}
+
+.text-home .curriculo i { /* Ícone SEMPRE centralizado */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.text-home .curriculo span { /* Texto escondido no início */
+    opacity: 0;
+    white-space: nowrap;
+    
+    font-size: 1rem;
+    margin-left: 32px; /* empurra texto pra direita do ícone */
+    transition: opacity 0.3s ease;
+}
+
+/* Ao passar o mouse */
+.text-home .curriculo:hover {
+    width: 200px;
+    border-radius: 25px;
+    justify-content: flex-start;
+}
+
+.text-home .curriculo:hover i { /* Ícone desliza um pouquinho pra esquerda */
+    left: 20px;
+    transform: translate(0, -50%);
+}
+
+.text-home .curriculo:hover span { /* Texto aparece */
+  opacity: 1; 
+}
+
 h1.titulo-section {
     font-size: 4rem;
     color: var(--corBranca);
@@ -314,6 +366,53 @@ section#sobre .interface {
 
 .img-sobre img:hover {
     transform: scale(1.05);
+}
+
+/* PARTE DE HABILIDADES */
+section#skills article {
+    display: grid;
+    grid-template: 1fr / 300px 300px 300px;
+
+    justify-content: center;
+
+    gap: 40px;
+    margin: 80px 0 0 0;
+}
+
+section#skills .git {
+    grid-column: 2;
+}
+
+section#skills h1 {
+    text-align: center;
+}
+
+#skills .box-skills {
+    background-color: var(--cor5);
+    padding: 20px;
+
+    border-radius: 16px;
+
+    color: var(--corBranca);
+    font-weight: 600;
+}
+
+#skills .box-skills:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.box-skills .icon-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+    gap: 32px;
+}
+
+.box-skills .icon-skills img {
+    max-width: 120px;
 }
 
 /* PARTE DO PROJETO */
@@ -395,53 +494,6 @@ section#projeto .interface > h1 {
 .container-portfolio .projeto4 {
     background: url(../image/projetos/site-exemplo2.jpg);
     background-size: cover;
-}
-
-/* PARTE DE HABILIDADES */
-section#skills article {
-    display: grid;
-    grid-template: 1fr / 300px 300px 300px;
-
-    justify-content: center;
-
-    gap: 40px;
-    margin: 80px 0 0 0;
-}
-
-section#skills .git {
-    grid-column: 2;
-}
-
-section#skills h1 {
-    text-align: center;
-}
-
-#skills .box-skills {
-    background-color: var(--cor5);
-    padding: 20px;
-
-    border-radius: 16px;
-
-    color: var(--corBranca);
-    font-weight: 600;
-}
-
-#skills .box-skills:hover {
-    transform: scale(1.07);
-    box-shadow: 0 0 20px rgba(255,255,255,0.2);
-}
-
-.box-skills .icon-skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 20px;
-    gap: 32px;
-}
-
-.box-skills .icon-skills img {
-    max-width: 120px;
 }
 
 /* PARTE DO CONTATO */
