@@ -43,7 +43,8 @@ body {
  
 section#home,
 section#sobre,
-section#contato {
+section#contato,
+section#projeto {
     min-height: 100vh; /* garante que ocupa pelo menos a altura da tela */
     padding: 4rem 2rem; /* respiro interno */
 
@@ -51,7 +52,6 @@ section#contato {
     align-items: center;
 }
 
-section#projeto,
 section#skills {
     padding: 180px 0;
     
@@ -63,6 +63,15 @@ section#skills {
     max-width: 1380px;
     padding: 0 4%;
     margin: 0 auto;
+}
+
+h1.titulo-section {
+    font-size: 4rem;
+    color: var(--corBranca);
+}
+
+h1.titulo-section span {
+    color: var(--cor2);
 }
 
 button {
@@ -269,6 +278,7 @@ section#home > .interface {
     }
 }
 
+/* PARTE DO BOTAO ENTRE EM CONTATO*/
 .text-home button {
     width: 200px;
     height: 50px;
@@ -276,7 +286,7 @@ section#home > .interface {
     margin: 15px 0;
 }
 
-/* CURRICULO */
+/* PARTE DO BOTÃO CURRICULO */
 .text-home .curriculo {
     position: relative;
 
@@ -312,7 +322,7 @@ section#home > .interface {
     transition: opacity 0.3s ease;
 }
 
-/* Ao passar o mouse */
+/* PARTE DO AO PASSAR O MOUSE CURRICULO */
 .text-home .curriculo:hover {
     width: 200px;
     border-radius: 25px;
@@ -329,16 +339,7 @@ section#home > .interface {
   opacity: 1; 
 }
 
-h1.titulo-section {
-    font-size: 4rem;
-    color: var(--corBranca);
-}
-
-h1.titulo-section span {
-    color: var(--cor2);
-}
-
-/* PARTE DO SOBRE */
+/* PARTE DO SOBRE MIM */
 section#sobre .interface {
     display: flex;
     align-items: center;
@@ -374,7 +375,7 @@ section#sobre .interface {
     transform: scale(1.05);
 }
 
-/* PARTE DE HABILIDADES */
+/* PARTE DE SKILLS */
 section#sobre article {
     display: grid;
     grid-template: 150px / repeat(4, 200px);
@@ -385,7 +386,18 @@ section#sobre article {
     margin: 40px 0 0 0;
 }
 
-#sobre .box-skills {
+section#sobre .sobre-skills > h2 {
+    font-size: 2.5rem;
+    color: var(--corBranca);
+    text-align: center;
+    margin-top: 15px;
+}
+
+section#sobre .sobre-skills > h2 > span{
+    color: var(--cor2);
+}
+
+section#sobre .box-skills {
     background-color: var(--cor5);
     padding: 20px;
 
