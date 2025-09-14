@@ -10,7 +10,7 @@ Um portfólio moderno e responsivo desenvolvido com HTML, CSS e JavaScript, cria
 - Seção de projetos com links diretos para cada trabalho
 - Área de contato com ícones e links para redes sociais
 - Design simples, limpo e intuitivo
-- Responsividade para diferentes tamanhos de tela (Em desenvolvimento)
+- Responsividade para diferentes tamanhos de tela (em desenvolvimento)
 
 # 💻 Tecnologias Utilizadas
 - HTML5
