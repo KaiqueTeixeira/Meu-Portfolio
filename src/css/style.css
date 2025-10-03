@@ -605,6 +605,13 @@ section#contato > .interface {
     font-size: 1.1rem;
 
     margin-bottom: 10px;
+
+    transition: all 0.2s ease;
+}
+
+.form-input:hover {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
 }
 
 form textarea {
