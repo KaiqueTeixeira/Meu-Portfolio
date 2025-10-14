@@ -1,0 +1,63 @@
+
+/* PARTE DO BOTAO DO HOME */
+
+/* PARTE DO BOTAO ENTRE EM CONTATO*/
+.text-home button {
+    width: 200px;
+    height: 50px;
+
+    margin: 15px 0;
+}
+
+/* PARTE DO BOTÃO CURRICULO */
+.text-home .curriculo {
+    position: relative;
+
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+
+    border-radius: 50%;
+    background-color: transparent;
+
+    overflow: hidden;
+
+    transition: all 0.4s ease;
+}
+
+.text-home .curriculo i { /* Ícone SEMPRE centralizado */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.text-home .curriculo span { /* Texto escondido no início */
+    opacity: 0;
+    white-space: nowrap;
+    
+    font-size: 1rem;
+    margin-left: 32px; /* empurra texto pra direita do ícone */
+    transition: opacity 0.3s ease;
+}
+
+/* PARTE DO AO PASSAR O MOUSE CURRICULO */
+.text-home .curriculo:hover {
+    width: 200px;
+    border-radius: 25px;
+    justify-content: flex-start;
+    background-color: var(--cor2);
+}
+
+.text-home .curriculo:hover i { /* Ícone desliza um pouquinho pra esquerda */
+    left: 20px;
+    transform: translate(0, -50%);
+}
+
+.text-home .curriculo:hover span { /* Texto aparece */
+  opacity: 1; 
+}

@@ -1,0 +1,54 @@
+
+/* PARTE DE SKILLS */
+
+section#sobre article {
+    display: grid;
+    grid-template: 150px / repeat(4, 200px);
+
+    justify-content: center;
+
+    gap: 40px;
+    margin: 40px 0 0 0;
+}
+
+section#sobre .sobre-skills > h2 {
+    font-size: 2.5rem;
+    color: var(--corBranca);
+    text-align: center;
+    margin-top: 15px;
+}
+
+section#sobre .sobre-skills > h2 > span{
+    color: var(--cor2);
+}
+
+section#sobre .box-skills {
+    background-color: var(--cor5);
+    padding: 20px;
+
+    border-radius: 16px;
+
+    color: var(--corBranca);
+    font-weight: 600;
+    font-size: 15px;
+
+    transition: .3s;
+}
+
+#sobre .box-skills:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.box-skills .icon-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+    gap: 16px;
+}
+
+.box-skills .icon-skills img {
+    max-width: 50px;
+}

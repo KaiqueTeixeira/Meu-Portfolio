@@ -1,0 +1,117 @@
+
+/* PARTE DO HOME */
+
+section#home > .interface {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    
+    text-align: left;
+    gap: 20px;
+}
+
+/* PARTE DA ESCRITA DO HOME */
+.text-home h1 {
+    color: var(--cor2);
+    font-size: clamp(3rem, 5vw, 3.5em); /* ANTES ERA 5em */
+    font-weight: bold;
+
+    cursor: default;
+}
+
+.text-home h1 span {
+    display: inline-block;
+    transition: .5s;
+}
+
+.text-home h1 span:hover {
+    color: var(--cor3);
+    transform: scale(1.1);
+}
+
+.text-home p {
+    color: var(--corBranca);
+    font-size: clamp(2rem, 2.5vw, 2.25em); /*ANTES ERA 2em*/
+    font-weight: normal;
+
+    padding-left: 3px;
+    cursor: default;
+}
+
+.text-home a {
+    color: var(--corBranca);    
+    text-decoration: none;
+}
+
+/* PARTE DA IMAGEM DO HOME */
+.img-home {
+    /*
+    width: 450px; 
+    height: 450px;
+    */
+
+    width: clamp(200px, 40vw, 450px);
+    height: clamp(200px, 40vw, 450px);
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-home img{
+    /*
+    height: 350px;
+    width: 350px;
+    */
+
+    width: clamp(180px, 35vw, 350px);
+    height: clamp(180px, 35vw, 350px);
+
+    object-fit: cover;
+    object-position: center top;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    transition: 0.2s ease;
+}   
+
+.img-home:hover img {
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}   
+
+.img-home div.arco-branco {
+    /*
+    height: 400px;
+    width: 400px;
+    */
+    
+    width: clamp(250px, 40vw, 400px);
+    height: clamp(250px, 40vw, 400px);
+    
+    border: 15px solid var(--corBranca); 
+    border-radius: 50%;
+    mask-image: linear-gradient(to right, black 0 50%, transparent 50% 100%);
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    animation: rodar 10s ease-in-out infinite;
+}
+
+@keyframes rodar {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

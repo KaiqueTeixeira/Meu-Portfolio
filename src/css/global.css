@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@import url(parts/1-nav.css);
+@import url(parts/2-home.css);
+@import url(parts/3-botao-home.css);
+@import url(parts/4-sobre-mim.css);
+@import url(parts/5-skills.css); 
+@import url(parts/6-projeto.css);
+@import url(parts/7-contato.css);
+@import url(parts/8-footer.css);
+
+/* PALETA DE CORES */
+:root{ 
+    --corBranca: #ffffff;
+    --corPreta: #000000;
+    --corCinza: #8d8d8d;
+
+    --cor1: #8741ea;
+    --cor2: #793ad1;
+    --cor3: #5b2c9e;
+    --cor4: #3D2F52;
+    --cor5: #2F1752;
+
+    --cor6: #a37dd9;
+    
+    --corNav: #4f3b6b;
+}
+
+/* FONTES */
+:root{
+    --font1: "Inter", sans-serif;
+}
+
+/* ESTILO GERAL */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    /* background: radial-gradient(circle at top left, #1a0933, #100820); */
+    background: url(../image/background-site.jpg) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+section#home,
+section#sobre,
+section#contato,
+section#projeto {
+    min-height: 100vh; /* garante que ocupa pelo menos a altura da tela */
+    padding: 4rem 2rem; /* respiro interno */
+
+    display: flex;
+    align-items: center;
+}
+
+section#skills {
+    padding: 180px 0;
+    
+    display: flex;
+    align-items: center;
+}
+
+.interface {
+    max-width: 1380px;
+    padding: 0 4%;
+    margin: 0 auto;
+}
+
+h1.titulo-section {
+    font-size: 4rem;
+    color: var(--corBranca);
+}
+
+h1.titulo-section span {
+    color: var(--cor2);
+}
+
+button {
+    background-color: transparent;
+    border: 2px solid var(--corBranca);
+    border-radius: 10px;
+
+    font-size: 1.2em;
+    color: var(--corBranca);
+
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+button:hover{
+    background-color: var(--cor2);
+    transform: scale(1.05);
+}

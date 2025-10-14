@@ -1,0 +1,37 @@
+
+/* PARTE DO SOBRE MIM */
+
+section#sobre .interface {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.conteudo-sobre {
+    display: flex;
+    align-items: center;
+    gap: 96px;
+}
+
+.text-sobre p {
+    color: var(--corCinza);
+    
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 1.5;
+
+    margin: 24px 0;
+}
+
+.img-sobre img {
+    height: 450px;
+    width: auto;
+    border-radius: 40px;
+
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: .3s;
+}
+
+.img-sobre img:hover {
+    transform: scale(1.05);
+}

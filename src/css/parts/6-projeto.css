@@ -1,0 +1,122 @@
+
+/* PARTE DO PROJETO */
+
+section#projeto .interface > h1 {
+    margin: 16px 0 70px 0;
+    text-align: center;
+}
+
+.projeto-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    gap: 30px;
+}
+
+.projeto-card {
+    background: rgba(30, 25, 50, 0.7);
+
+    border-radius: 15px;
+    overflow: hidden;
+    
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+ .projeto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.250);
+}
+
+.projeto-imagem {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.projeto-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-position: top;
+    object-fit: cover;
+    
+    transition: transform 0.5s ease;
+}
+
+.projeto-card:hover .projeto-imagem img {
+    transform: scale(1.05);
+}
+
+.projeto-conteudo {
+    padding: 25px;
+}
+
+.projeto-conteudo h2 {
+    font-size: 1.6rem;
+    color: var(--corBranca);
+    margin-bottom: 15px;
+}
+
+.projeto-conteudo p {
+    color: var(--corCinza);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.projeto-tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+
+    cursor: default;
+}
+
+.projeto-tecnologias span {
+    background: rgba(121, 58, 209, 0.2);
+    color: var(--cor6); 
+
+    padding: 8px 17px;
+    border-radius: 20px;
+
+    font-size: 0.85rem;
+    border: 1px solid rgba(121, 58, 209, 0.5);
+}
+
+.projeto-botoes .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 20px;
+    margin: 10px 10px 0 0;
+
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: all 0.4s ease;
+}
+
+.projeto-botoes .btn-ver {
+    background: var(--cor2);
+    color: var(--corBranca);
+}
+
+.projeto-botoes .btn-codigo {
+    background: transparent;
+    color: var(--cor2);
+    border: 1px solid var(--cor2);
+}
+
+.projeto-botoes .btn-ver:hover {
+    background: var(--cor1);
+    transform: translateY(-4px);
+}
+
+.projeto-botoes .btn-codigo:hover {
+    background: rgba(121, 58, 209, 0.1);
+    transform: translateY(-4px);
+}

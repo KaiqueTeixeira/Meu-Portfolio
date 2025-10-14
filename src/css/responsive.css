@@ -1,0 +1,50 @@
+@import url(global.css);
+
+@media screen and (max-width:768px) {
+
+    /* PARTE DO BOTÃO CURRICULO */
+    .text-home .curriculo {
+        position: initial;
+        width: 200px;
+        border-radius: 10px;
+        overflow: initial;
+        transition: none;
+    }
+
+    .text-home .curriculo i { /* Ícone SEMPRE centralizado */
+        position: initial;
+        left: 0;
+        top: 0;
+        transform: 0;
+
+        transition: none;
+        z-index: 2;
+    }
+
+    .text-home .curriculo span { /* Texto escondido no início */
+        opacity: 1;
+        white-space: none;
+        
+        font-size: 1.2rem;
+        margin-left: 3px; 
+        transition: none;
+    }
+
+    /* PARTE DO AO PASSAR O MOUSE CURRICULO */
+    .text-home .curriculo:hover {
+        border-radius: 10px;
+        justify-content: none;
+        background-color: var(--cor2);
+        transform: scale(1.05);
+    }
+
+    .text-home .curriculo:hover i { 
+        left: 0;
+        transform: 0;
+    }
+
+    .text-home .curriculo:hover span { 
+        opacity: 1; 
+    }
+
+}
