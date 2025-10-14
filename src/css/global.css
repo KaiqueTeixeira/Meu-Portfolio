@@ -1,12 +1,12 @@
 @charset "UTF-8";
-@import url(parts/1-nav.css);
-@import url(parts/2-home.css);
-@import url(parts/3-botao-home.css);
-@import url(parts/4-sobre-mim.css);
-@import url(parts/5-skills.css); 
-@import url(parts/6-projeto.css);
-@import url(parts/7-contato.css);
-@import url(parts/8-footer.css);
+@import url(parts/1-nav/global-nav.css);
+@import url(parts/2-home/global-home.css);
+@import url(parts/3-botao-home/global-botao-home.css);
+@import url(parts/4-sobre-mim/global-sobre-mim.css);
+@import url(parts/5-skills/global-skills.css);
+@import url(parts/6-projeto/global-projeto.css);
+@import url(parts/7-contato/global-contato.css);
+@import url(parts/8-footer/global-footer.css);
 
 /* PALETA DE CORES */
 :root{ 
