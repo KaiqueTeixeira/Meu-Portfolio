@@ -233,7 +233,7 @@ section#home > .interface {
     height: clamp(180px, 35vw, 350px);
 
     object-fit: cover;
-    object-position: center top;
+    object-position: center bottom;
 
     border-radius: 50%;
 
