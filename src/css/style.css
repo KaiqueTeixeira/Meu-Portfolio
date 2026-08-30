@@ -379,11 +379,20 @@ section#sobre .interface {
 section#sobre article {
     display: grid;
     grid-template: 150px / repeat(4, 200px);
+    grid-auto-rows: 150px;
 
     justify-content: center;
 
     gap: 40px;
     margin: 40px 0 0 0;
+}
+
+section#sobre article .box-skills:nth-child(5) {
+    grid-column: 2;
+}
+
+section#sobre article .box-skills:nth-child(6) {
+    grid-column: 3;
 }
 
 section#sobre .sobre-skills > h2 {
@@ -436,7 +445,8 @@ section#projeto .interface > h1 {
 
 .projeto-grid {
     display: grid;
-    grid-template-columns: repeat(2, 500px);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 500px));
+    justify-content: center;
     gap: 30px;
 }
 
