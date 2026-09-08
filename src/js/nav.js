@@ -21,7 +21,7 @@
     }, {
         root: null,
         rootMargin: "0px",
-        threshold: 0.6 // 60% da seção visível já conta como ativa
+        threshold: 0.4 // Reduzido de 0.6 para 0.2
     });
 
     // Observa cada seção
